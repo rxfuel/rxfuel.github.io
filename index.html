@@ -1,1 +1,227 @@
-Hello Reactive World
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta content="IE=edge" http-equiv="X-UA-Compatible">
+  <meta content="width=device-width,initial-scale=1" name="viewport">
+  <meta content="Lightweight Android framework for creating fully reactive apps" name="description">
+  <meta name="google" content="notranslate" />
+  <meta content="RxFuel" name="author">
+
+  <meta name="msapplication-tap-highlight" content="no">
+  
+  
+  <link rel="apple-touch-icon" sizes="180x180" href="./assets/apple-icon-180x180.png">
+  <link href="./assets/favicon.ico" rel="icon">
+
+  <link href="" rel="stylesheet">
+
+
+  <title>RxFuel</title>
+
+<link href="./style.css" rel="stylesheet"></head>
+
+<body>
+<header>
+  <nav class="navbar navbar-default active">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="./index.html" title="">
+          <img src="./assets/images/logo.png" height="40px" class="navbar-logo-img" alt="">
+          <span style="font-size: 30px; font-family: Nunito;">RxFuel</span>
+        </a>
+      </div>
+
+      <div class="collapse navbar-collapse" id="navbar-collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <p>
+              <a href="./documentation.html" class="btn btn-default navbar-btn" title="">Documentation</a>
+            </p>
+          </li>
+          <li><a href="https://github.com/rxfuel/rxfuel-android" target="_blank" style="padding: 20px;">
+              <img src="assets/images/github-logo.png" style="height: 42px;">
+              </a>
+            </li>
+        </ul>
+      </div> 
+    </div>
+  </nav>
+</header>
+
+<!-- Add your site or app content here -->
+  <div class="hero-full-container background-image-container white-text-container">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <h1>Love RxJava & Koltin?</h1>
+          <h3>Lightweight Android framework, for creating fully reactive apps.</h3>
+          <br>
+          <a href="./documentation.html" class="btn btn-default btn-lg" title="">Get Started</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-container">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-md-10 col-md-offset-1">
+          <div class="text-center">
+            <h2>Why?</h2>
+            <p>Creating clean architechure Android app was always pain. RxFuel makes it simple with the power of RxJava and Kotlin. Manage your data flow with a single Observable stream and renders the UI with view states. </p>
+         
+            
+             </div>
+            
+            
+             <div class="card-shadow reveal" style="margin-top: 50px;">
+            
+            <div class="reveal" style="padding: 30px; border-bottom: 1px solid #dbdcdb;">
+                
+                <div class="row" >
+                    <div class="col-md-4 text-center align-middle">
+                        <img width="150px" 
+                             src="./assets/images/spaghetti.png" 
+                             style="margin:  45px;">
+                    </div>
+                 
+                    <div class="col-md-8">
+  <h3 style="color : #CB356B">Clean Code</h3>
+                  <p>
+                   RxFuel makes your activity highly decoupled with business logic. All events thats happens
+                   in the activity is converted as an Observable and receives a view state after                                        execution to render the UI.
+                  </p>
+
+                  <p>
+                   From the events obervable to receiving the final view state, RxFuel handles it in a single
+                      observable stream. Making it clean with no spaghetti code.
+                  </p>
+                    </div>
+                </div>
+                
+                
+                
+                
+              </div>
+            
+            <div class="reveal" style="padding: 30px; border-bottom: 1px solid #dbdcdb;">
+                <div class="row" >
+                    
+                 
+                    <div class="col-md-8 text-right">
+
+                <h3 style="color : #BD3F32">High Testability</h3>
+                  <p>
+                    Unit testing your code is much easier with RxFuel. All events happening in the activity 
+                    is emitted as an event object. In unit test, you can just emit a event object to assert an                          expected view state is observed.
+                  </p>
+
+                  <p>
+                      RxFuel reduces the need of writing lots of instrumentation test as all events can be tested in unit test itself.
+                  </p>
+                    </div>
+                    
+                    <div class="col-md-4 text-center align-middle">
+                        <img width="150px" 
+                            src="./assets/images/lab.png" 
+                             style="margin:  45px;">
+                    </div>
+                </div>
+               
+                
+                
+                
+              </div>
+            
+            <div class="reveal" style="padding: 30px; border-bottom: 1px solid #dbdcdb;">
+                
+                <div class="row" >
+                    <div class="col-md-4 text-center align-middle">
+                        <img width="150px" 
+                            src="./assets/images/smartphone.png" 
+                             style="margin:  45px;">
+                    </div>
+                 
+                    <div class="col-md-8">
+
+                    <h3 style="color : #CB356B">View state restoration</h3>
+                      <p>
+                        Everytime an activity is recreated due to a config change such as screen rotation
+                          or app restoration to foreground, the last view state is re-emitted to render the UI to latest state. You do not need to handle any state restoration manually.
+                      </p>
+
+                      <p>
+                        This actually eliminates the need of using fragments to restore the state. Making the code much simpler.
+                      </p>
+                    </div>
+                </div>
+               
+                  
+              </div>
+            </div>
+            
+            
+            <div style="margin-top:35px; text-align:center">
+               <p>
+                This framework is in alpha stage and not recommended for production.
+                </p>
+          <a href="./documentation.html" class="btn btn-primary btn-lg" style="margin-top:10px" title="">Try It Now!</a>
+            </div>
+            
+            
+       </div>
+      </div>
+    </div>
+  </div>
+    
+<script>
+  document.addEventListener("DOMContentLoaded", function (event) {
+    navbarFixedTopAnimation();
+  });
+</script>
+
+<footer class="footer-container white-text-container">
+  <div class="container">
+    <div class="row">
+
+     
+      <div class="col-xs-12">
+        <h3>RxFuel</h3>
+
+        <div class="row">
+          <div class="col-xs-12 col-sm-7">
+            <p><small>Redefining Android development with RxJava</small>
+            </p>
+          </div>
+          <div class="col-xs-12 col-sm-5">
+            <p class="text-right">
+              <a href="https://stackoverflow.com/questions/tagged/rxfuel" class="social-round-icon white-round-icon fa-icon" title="">
+                <i class="fa fa-stack-overflow" aria-hidden="true"></i>
+              </a>
+            </p>
+          </div>
+        </div>
+        
+        
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function (event) {
+    navActivePage();
+    scrollRevelation('.reveal');
+  });
+</script>
+<script type="text/javascript" src="./main.js"></script></body>
+
+</html>
