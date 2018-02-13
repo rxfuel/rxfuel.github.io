@@ -1,3 +1,3 @@
-# Headline
+# RxFuel
 
-> An awesome project.
+> Get started
