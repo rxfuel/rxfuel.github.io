@@ -7,13 +7,13 @@
     
 * Basics
 
-    * [View](/basics/view)
-    * [ViewModel](/basics/view-model)
-    * [Processors](/basics/processors)
     * [Event](/basics/event)
     * [Action](/basics/action)
     * [Result](/basics/result)
     * [ViewState](/basics/view-state)
+    * [Processors](/basics/processors)
+    * [View](/basics/view)
+    * [ViewModel](/basics/view-model)
     
 * More Features
 
