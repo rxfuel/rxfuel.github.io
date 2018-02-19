@@ -1,16 +1,31 @@
 # Event
 
-> Event is basically a class that represents some event that happens from the android device. It could be user UI interactions, GPS location update etc.
+> Event represents an interaction that happened from the android device. It could be user UI interaction, GPS location update etc.
 
-Every activity should have a base event class that is inherited from `RxFuelEvent`. Since you will have many events in your Activity you can define a class for each as a sub class.
-
-RxFuelEvent has an abstract Boolean member val `hasProcessor` that you need to implement in your event classes. Set it to `true` if that particular event needs processing such as web request, long background process, database query etc. Such events need to be mapped to action in your ViewModel and define a processor for it.
+Every activity should have a base event [sealed class](https://kotlinlang.org/docs/reference/sealed-classes.html) that is inherited from `RxFuelEvent`. Since you will have many events in your Activity, you can define a class for each as a sub class in a nested way. You can make use [data class](https://kotlinlang.org/docs/reference/data-classes.html) to easily represent your event data.
 
 ```kotlin
 sealed class MyEvent : RxFuelEvent {
-    data class SearchEvent(val query: String, override val hasProcessor: Boolean = true) : MyEvent()
-    sealed class ButtonClick : MyEvent() {
-        override val hasProcessor: Boolean = false
-    }
+
+    data class Search(val query: String) : MyEvent()
+    
+    object ButtonClick : MyEvent()
+    
+}
+```
+
+## Event Scopes
+
+Events need to be categorized by their usage. All event might not require a processor as it could just be a view state update. Such event's scope is UI level and need to annotate them with `@EventScope(Scope.UI)`. Event that require processing have domain scope and need to annotate them with `@EventScope(Scope.DOMAIN)`.
+
+```kotlin
+sealed class MyEvent : RxFuelEvent {
+
+    @EventScope(Scope.DOMAIN)
+    data class Search(val query: String) : MyEvent()
+    
+    @EventScope(Scope.UI)
+    object ButtonClick : MyEvent()
+    
 }
 ```

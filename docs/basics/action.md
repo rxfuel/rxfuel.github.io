@@ -1,8 +1,8 @@
 # Action
 
-> Action is a class that represents the data that need to be processed.
+> Action represents the data that need to be processed.
 
-Action class need to be inherited from `RxFuelAction`. We recommend to define it Define an action class for every processor you have as a sub class. You will need to map events that have processor to the action you define, in your ViewModel.
+Define an Action [sealed class](https://kotlinlang.org/docs/reference/sealed-classes.html) for every processor module implementing `RxFuelAction`. Define different Action classes for every processor it holds as a sub class. 
 
 ```kotlin
 sealed class MyAction : RxFuelAction {

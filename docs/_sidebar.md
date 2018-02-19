@@ -5,15 +5,18 @@
     * [Architechure](/getting-started/architechure)
     * [Design Pattern](/getting-started/design-pattern)
     
-* Basics
+* UI
 
     * [Event](/basics/event)
-    * [Action](/basics/action)
-    * [Result](/basics/result)
     * [ViewState](/basics/view-state)
-    * [Processors](/basics/processors)
     * [View](/basics/view)
     * [ViewModel](/basics/view-model)
+    
+* Domain
+
+    * [Action](/basics/action)
+    * [Result](/basics/result)
+    * [Processors](/basics/processors)
     
 * More Features
 
