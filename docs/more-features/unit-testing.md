@@ -8,18 +8,18 @@ class MyTest {
 
     private lateinit var testRxFuel: TestRxFuelViewModel<MyEvent, MyViewState>
     private lateinit var testObserver: TestObserver<MyViewState>
-    
+
     @Before
     fun setup() {
-    
+
         testRxFuel = TestRxFuelViewModel(MyViewModel())
                 .withProcessorModules(MyProcessorModule())
                 .synchronously()
 
         testObserver = testRxFuel.getObserver()
     }
-    
-    
+
+
     @Test
     fun test() {
         testRxFuel.events(
@@ -32,15 +32,10 @@ class MyTest {
         })
 
         testObserver.assertValueAt(1, { state ->
-            state == MyViewState(
-                    true,
-                    listOf(),
-                    null,
-                    null,
-                    true,
-                    null)
+            state == MyViewState(/* values to be asserted */)
         })
 
+        testObserver.assertCompleted();
         testObserver.assertNoErrors()
     }
 
@@ -48,7 +43,7 @@ class MyTest {
     fun after(){
         testRxFuel.destroy()
     }
-    
+
 }
-    
+
 ```

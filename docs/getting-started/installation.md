@@ -3,10 +3,10 @@
 Add the following dependency in your module build.gradle :
 
 ```gradle
-implementation 'com.rxfuel.rxfuel:rxfuel-android:0.0.5'
+api 'com.rxfuel.rxfuel:rxfuel-android:0.0.8'
 ```
 
-Add `jcenter` repository in your project build.gradle : 
+Add `jcenter` repository in your project build.gradle :
 
 ```gradle
 allprojects {
